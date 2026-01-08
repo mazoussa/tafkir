@@ -5,24 +5,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>tafkir.ai — The Reasoning Layer of Arabic AI</title>
-  <meta name="description" content="Premium dictionary .ai domain. Tafkir is a category-defining identity for reasoning engines, decision intelligence, and agentic systems in MENA." />
+  <!-- Updated Title (investment-focused, still brand-consistent) -->
+  <title>tafkir.ai — The Reasoning Layer of Arabic AI | Strategic Acquisition</title>
+
+  <!-- Updated description (adds acquisition/NDA/escrow) -->
+  <meta name="description" content="Premium dictionary-grade .ai domain. Tafkir is a category-defining identity for reasoning engines, decision intelligence, and agentic systems in MENA. Acquisition open. NDA and escrow supported." />
   <meta name="keywords" content="AI domain for sale, dictionary domain, Arabic AI, tafkir, reasoning AI, decision intelligence, MENA tech, agents, deep tech" />
   <meta name="theme-color" content="#07001A" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://tafkir.ai/" />
 
+  <!-- Product Schema (NEW) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": "https://tafkir.ai/#product",
+    "name": "tafkir.ai — Premium Domain Name",
+    "description": "Premium dictionary-grade .ai domain representing 'Thinking' and 'Reasoning' for Arabic AI, agents, and decision intelligence.",
+    "category": "Domain Name",
+    "brand": { "@type": "Brand", "name": "tafkir.ai" },
+    "image": ["https://tafkir.ai/og.jpg"],
+    "mainEntityOfPage": "https://tafkir.ai/",
+    "sku": "TAFKIRAI-DOMAIN",
+    "offers": {
+      "@type": "Offer",
+      "@id": "https://tafkir.ai/#offer",
+      "url": "https://tafkir.ai/",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition",
+      "seller": { "@type": "Organization", "name": "tafkir.ai" },
+      "description": "Acquisition available by confidential inquiry. NDA and escrow supported."
+    }
+  }
+  </script>
+
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="tafkir.ai — The Reasoning Layer of Arabic AI" />
-  <meta property="og:description" content="Premium AI asset available for acquisition. The ultimate identity for reasoning engines and decision intelligence." />
+  <meta property="og:title" content="tafkir.ai — The Reasoning Layer of Arabic AI | Acquisition Open" />
+  <meta property="og:description" content="Premium AI domain asset available for acquisition. NDA and escrow supported." />
   <meta property="og:url" content="https://tafkir.ai/" />
   <meta property="og:image" content="https://tafkir.ai/og.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="tafkir.ai — The Reasoning Layer of Arabic AI" />
-  <meta name="twitter:description" content="Premium AI asset available for acquisition. The ultimate identity for reasoning engines and decision intelligence." />
+  <meta name="twitter:title" content="tafkir.ai — The Reasoning Layer of Arabic AI | Acquisition Open" />
+  <meta name="twitter:description" content="Premium AI domain asset available for acquisition. NDA and escrow supported." />
   <meta name="twitter:image" content="https://tafkir.ai/og.jpg" />
 
   <link rel="icon" href="/favicon.ico" />
@@ -1182,35 +1211,19 @@
         <h2 class="form-title">Acquire This Asset</h2>
         <p class="form-sub">Direct negotiation with strict confidentiality.</p>
 
-        <!--
-          JS-enabled flow: preventDefault + fetch to https://api.web3forms.com/submit
-          No redirect/thank-you.
-          No-JS fallback: form posts to Web3Forms normally.
-        -->
         <form
           id="inquiryForm"
           class="form-grid"
           method="POST"
           action="https://api.web3forms.com/submit"
         >
-          <!-- Web3Forms Access Key -->
-          <!-- IMPORTANT: replace with your real Web3Forms access key -->
           <input type="hidden" name="access_key" value="44bf1ec3-ea65-496b-a1f1-030b8ece9979" />
-
-          <!-- Optional email routing (works if your Web3Forms plan supports it) -->
           <input type="hidden" name="to" value="invest@tafkir.ai" />
-
-          <!-- Email metadata -->
           <input type="hidden" name="subject" value="New Inquiry: tafkir.ai" />
           <input type="hidden" name="from_name" value="tafkir.ai Website" />
-
-          <!-- reply-to will be set dynamically from the email field -->
           <input type="hidden" name="replyto" id="replytoField" value="" />
 
-          <!-- Bot protection (Web3Forms style) -->
           <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" aria-hidden="true" />
-
-          <!-- (extra honeypot, harmless) -->
           <input type="text" name="bot-field" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
           <div class="field">
@@ -1242,8 +1255,6 @@
 
           <div class="field full" style="margin-top:6px;">
             <button type="submit" class="submit-btn" id="submitBtn">Submit Inquiry</button>
-
-            <!-- Friendly error message area -->
             <div class="form-alert" id="formAlert" role="status" aria-live="polite"></div>
 
             <div class="legal-note">
@@ -1299,7 +1310,6 @@
             We will contact you at the provided email shortly.
           </div>
 
-          <!-- NDA note (shown only if checked) -->
           <div class="confirm-flag" id="ndaNote" style="display:none;">
             <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
             NDA request noted
@@ -1623,7 +1633,6 @@
       }
 
       form.addEventListener("submit", async (e) => {
-        // JS path: prevent redirect + use fetch to Web3Forms
         e.preventDefault();
         clearAlert();
 
@@ -1632,14 +1641,11 @@
         submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i> Sending...';
 
         try {
-          // Set reply-to to the actual email (not {{email}})
           replytoField.value = (emailInput.value || "").trim();
 
-          // Build payload
           const formData = new FormData(form);
           const payload = {};
           formData.forEach((value, key) => {
-            // ignore empty honeypot if present
             payload[key] = value;
           });
 
@@ -1655,7 +1661,6 @@
             throw new Error(data && data.message ? data.message : "Submission failed");
           }
 
-          // Success
           const ndaChecked = ndaFirst && ndaFirst.checked;
           ndaNote.style.display = ndaChecked ? "inline-flex" : "none";
 
