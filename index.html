@@ -273,18 +273,63 @@
       cursor: pointer;
     }
 
-    .brand img {
-      height: 38px;
-      width: auto;
-      display: block;
-      transition: all 0.25s ease;
-    }
+    .brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  text-decoration:none;
+  user-select:none;
+  cursor:pointer;
+}
 
-    header.scrolled .brand img { height: 32px; }
+/* الأيقونة */
+.brand-icon{
+  width:34px;
+  height:34px;
+  display:block;
+  flex:0 0 auto;
 
-    [data-theme="dark"] .brand img {
-      filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(167, 139, 250, 0.35));
-    }
+  /* الحل هنا */
+  position: relative;
+  top: 1px;   /* جرّب 1px أو 2px */
+
+  transition:
+    width .25s ease,
+    height .25s ease,
+    top .25s ease;
+}
+
+}
+
+/* النص */
+.brand-wordmark{
+  font-weight:800;
+  font-size:22px;
+  letter-spacing:0.2px;
+  line-height:1;
+  color:var(--text-main);
+  transition: font-size .25s ease, transform .25s ease;
+}
+
+/* عند السكرول: صغّر كل واحد لوحده مثل اللي بالصورة */
+header.scrolled .brand-icon{
+  width:26px;
+  height:26px;
+}
+header.scrolled .brand-wordmark{
+  font-size:18px;
+}
+
+/* الدارك: خلي النص أبيض */
+[data-theme="dark"] .brand-wordmark{
+  color:#fff;
+}
+
+/* مهم: لا تطبق invert على كل صور الهيدر */
+[data-theme="dark"] .brand-icon{
+  filter:brightness(0) invert(1);
+}
+
 
     .header-right {
       display: flex;
@@ -338,6 +383,26 @@
       transform: translateY(-1px);
       box-shadow: 0 10px 26px rgba(124, 58, 237, 0.18);
     }
+/* === HERO WORDMARK (TEXT INSTEAD OF IMAGE) === */
+
+.hero-title{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-wordmark{
+  font-weight:800;
+  font-size:clamp(3.2rem, 7vw, 6.2rem);
+  letter-spacing:0.5px;
+  line-height:1;
+  color:var(--text-main);
+  display:inline-block;
+}
+
+[data-theme="dark"] .hero-wordmark{
+  color:#fff;
+}
 
     .acq-dot {
       width: 7px;
@@ -383,7 +448,10 @@
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      padding: 40px 60px;
+      padding: 70px 120px;      /* يكبّر الارتفاع والعرض */
+      min-width: 820px;         /* عرض أدنى */
+      max-width: 1000px;        /* حد أقصى أنيق */
+      min-height: 320px; 
       margin-bottom: 30px;
       background: var(--glass-bg);
       backdrop-filter: blur(20px);
@@ -1123,18 +1191,37 @@
     @media (max-width: 980px) {
       .steps-grid { grid-template-columns: repeat(2, 1fr); }
     }
-    @media (max-width: 768px) {
-      form.form-grid { grid-template-columns: 1fr; }
-      .steps-grid { grid-template-columns: 1fr; }
-      .form-card { padding: 30px 18px; }
-      .hero h1 { padding: 30px 20px; width: 100%; border-radius: 24px; }
-      .hero-logo { width: 100%; max-width: 400px; }
-      .popup-foot { justify-content: center; }
-      .popup-btn { width: 100%; }
-      .acquisition-badge { padding: 0; width: 40px; justify-content: center; border-radius: 50%; }
-      .acquisition-badge .acq-text { display: none; }
-      .acq-dot { width: 8px; height: 8px; }
-    }
+    @media (max-width: 768px){
+
+  /* امنع أي تمدد أفقي */
+  .container{ padding-left: 16px; padding-right: 16px; }
+
+  /* بطاقة الهيرو: اجعلها بعرض الجهاز بدون min-width */
+  .hero h1{
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;          /* مهم جدًا: يلغي 820px */
+    min-height: 0;
+
+    padding: 46px 18px;    /* قلّلها للموبايل */
+    border-radius: 26px;
+    margin-bottom: 22px;
+  }
+
+  /* ترتيب نص الهيرو داخل البطاقة */
+  .hero-title{
+    gap: 10px;
+  }
+
+  .hero-wordmark{
+    font-size: clamp(2.2rem, 11vw, 3.1rem); /* حجم مناسب للموبايل */
+  }
+
+  .hero-ar{
+    font-size: clamp(1.4rem, 7vw, 2.0rem);  /* العربي أصغر */
+  }
+}
+
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -1151,8 +1238,18 @@
   <div class="container">
     <header id="mainHeader">
       <a class="brand" href="#" id="scrollTop" aria-label="tafkir.ai">
-        <img src="logo.png" alt="tafkir.ai logo" width="180" height="38" loading="eager" fetchpriority="high" />
-      </a>
+  <img
+    src="logo-icon.png"
+    alt=""
+    class="brand-icon"
+    aria-hidden="true"
+    decoding="async"
+  />
+
+  <span class="brand-wordmark" aria-hidden="true">tafkir.ai</span>
+</a>
+
+
 
       <div class="header-right">
         <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle theme">
@@ -1169,10 +1266,13 @@
     <section class="hero">
       <div class="hero-label">Premium AI Domain Asset</div>
 
-      <h1>
-        <span class="sr-only">tafkir.ai — The Reasoning Layer of Arabic AI | Strategic Acquisition</span>
-        <img class="hero-logo" src="logo.png" alt="tafkir.ai" width="560" height="160" loading="eager" fetchpriority="high" />
-      </h1>
+      <h1 class="hero-title">
+  <span class="sr-only">
+    tafkir.ai — The Reasoning Layer of Arabic AI | Strategic Acquisition
+  </span>
+  <span class="hero-wordmark">tafkir.ai</span>
+</h1>
+
 
       <p class="tagline">
         The Reasoning Layer of Artificial Intelligence.<br />
