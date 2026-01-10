@@ -4,18 +4,48 @@
   <meta name="google-site-verification" content="M0vTFSLyHZaoA9NWqbd1FaL8GZOH84uTitSIWpqvUmE" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="tafkir.ai" />
+  <link rel="manifest" href="/site.webmanifest" />
 
-  <!-- Updated Title (investment-focused, still brand-consistent) -->
+
   <title>tafkir.ai — The Reasoning Layer of Arabic AI | Strategic Acquisition</title>
-
-  <!-- Updated description (adds acquisition/NDA/escrow) -->
   <meta name="description" content="Premium dictionary-grade .ai domain. Tafkir is a category-defining identity for reasoning engines, decision intelligence, and agentic systems in MENA. Acquisition open. NDA and escrow supported." />
   <meta name="keywords" content="AI domain for sale, dictionary domain, Arabic AI, tafkir, reasoning AI, decision intelligence, MENA tech, agents, deep tech" />
   <meta name="theme-color" content="#07001A" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://tafkir.ai/" />
+  <link rel="alternate" hreflang="en" href="https://tafkir.ai/" />
 
-  <!-- Product Schema (NEW) -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="tafkir.ai" />
+  <meta property="og:title" content="tafkir.ai — The Reasoning Layer of Arabic AI | Acquisition Open" />
+  <meta property="og:description" content="Premium AI domain asset available for acquisition. NDA and escrow supported." />
+  <meta property="og:url" content="https://tafkir.ai/" />
+  <meta property="og:image" content="https://tafkir.ai/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="tafkir.ai — The Reasoning Layer of Arabic AI | Acquisition Open" />
+  <meta name="twitter:description" content="Premium AI domain asset available for acquisition. NDA and escrow supported." />
+  <meta name="twitter:image" content="https://tafkir.ai/og.jpg" />
+  <meta name="twitter:url" content="https://tafkir.ai/" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="preload" as="image" href="logo.png" fetchpriority="high" />
+  <link rel="preload" as="image" href="og.jpg" />
+
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -31,37 +61,39 @@
     "offers": {
       "@type": "Offer",
       "@id": "https://tafkir.ai/#offer",
-      "url": "https://tafkir.ai/",
+      "url": "https://tafkir.ai/#inquiry",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "itemCondition": "https://schema.org/NewCondition",
       "seller": { "@type": "Organization", "name": "tafkir.ai" },
-      "description": "Acquisition available by confidential inquiry. NDA and escrow supported."
+      "description": "Acquisition available by confidential inquiry. NDA-first option and escrow-supported closing."
     }
   }
   </script>
 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="tafkir.ai — The Reasoning Layer of Arabic AI | Acquisition Open" />
-  <meta property="og:description" content="Premium AI domain asset available for acquisition. NDA and escrow supported." />
-  <meta property="og:url" content="https://tafkir.ai/" />
-  <meta property="og:image" content="https://tafkir.ai/og.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://tafkir.ai/#website",
+    "url": "https://tafkir.ai/",
+    "name": "tafkir.ai",
+    "inLanguage": "en"
+  }
+  </script>
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="tafkir.ai — The Reasoning Layer of Arabic AI | Acquisition Open" />
-  <meta name="twitter:description" content="Premium AI domain asset available for acquisition. NDA and escrow supported." />
-  <meta name="twitter:image" content="https://tafkir.ai/og.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://tafkir.ai/#org",
+    "name": "tafkir.ai",
+    "url": "https://tafkir.ai/",
+    "email": "invest@tafkir.ai"
+  }
+  </script>
 
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
+  <!-- Early theme set to avoid flash -->
   <script>
     (function () {
       try {
@@ -138,7 +170,45 @@
       position: relative;
     }
 
-    /* --- Background Layers --- */
+    .sr-only {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+
+    .ar-inline{
+      direction: rtl;
+      unicode-bidi: isolate;
+      font-weight: 900;
+      padding: 0 8px;
+      border-radius: 10px;
+      background: rgba(168, 85, 247, 0.12);
+      border: 1px solid rgba(168, 85, 247, 0.25);
+      color: var(--text-main);
+      display: inline-block;
+      margin: 0 4px;
+    }
+
+    .word-pill{
+      direction: ltr;
+      unicode-bidi: isolate;
+      font-weight: 900;
+      padding: 0 8px;
+      border-radius: 10px;
+      background: rgba(168, 85, 247, 0.12);
+      border: 1px solid rgba(168, 85, 247, 0.25);
+      color: var(--text-main);
+      display: inline-block;
+      margin: 0 4px;
+      white-space: nowrap;
+    }
+
     .bg-gradient {
       position: fixed; inset: 0;
       z-index: 0;
@@ -147,7 +217,6 @@
       opacity: 0;
       transition: opacity 0.5s ease;
     }
-
     [data-theme="dark"] .bg-gradient { opacity: 1; }
 
     #bg {
@@ -158,7 +227,6 @@
       transition: opacity 0.5s ease;
       pointer-events: none;
     }
-    /* -------------------------- */
 
     .container {
       position: relative;
@@ -244,9 +312,9 @@
       transform: rotate(12deg);
     }
 
-    .status-pill {
+    .acquisition-badge{
       display: inline-flex;
-      align-items: center;
+      align-items:center;
       gap: 10px;
       padding: 10px 18px;
       height: 40px;
@@ -257,20 +325,28 @@
       font-weight: 800;
       font-size: 0.85rem;
       white-space: nowrap;
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
     }
 
-    [data-theme="dark"] .status-pill {
+    [data-theme="dark"] .acquisition-badge {
       background: rgba(139, 92, 246, 0.18);
       border-color: rgba(167, 139, 250, 0.35);
     }
 
-    .status-dot {
+    .acquisition-badge:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 26px rgba(124, 58, 237, 0.18);
+    }
+
+    .acq-dot {
       width: 7px;
       height: 7px;
       border-radius: 50%;
       background: var(--accent-primary);
       box-shadow: 0 0 14px rgba(167, 139, 250, 0.85);
       animation: pulse 2s infinite;
+      flex: 0 0 auto;
     }
 
     @keyframes pulse {
@@ -278,7 +354,6 @@
       50% { opacity: 0.5; transform: scale(0.85); }
     }
 
-    /* --- HERO --- */
     .hero {
       display: flex;
       flex-direction: column;
@@ -365,31 +440,6 @@
       color: var(--text-muted);
     }
 
-    .word-arabic{
-      direction: rtl;
-      unicode-bidi: isolate;
-      font-weight: 900;
-      padding: 0 8px;
-      border-radius: 10px;
-      background: rgba(168, 85, 247, 0.12);
-      border: 1px solid rgba(168, 85, 247, 0.25);
-      color: var(--text-main);
-      display: inline-block;
-      margin: 0 4px;
-    }
-
-    .word-pill{
-      font-weight: 900;
-      padding: 0 8px;
-      border-radius: 10px;
-      background: rgba(168, 85, 247, 0.12);
-      border: 1px solid rgba(168, 85, 247, 0.25);
-      color: var(--text-main);
-      display: inline-block;
-      margin: 0 4px;
-      white-space: nowrap;
-    }
-
     .cta {
       display: flex;
       flex-direction: column;
@@ -432,6 +482,35 @@
       transform: translateY(-3px);
       opacity: 1;
     }
+
+    @keyframes heroIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-label, .hero h1, .tagline, .cta {
+      opacity: 0;
+      transform: translateY(10px);
+      animation: heroIn 0.55s ease forwards;
+    }
+    .hero-label { animation-delay: 0.05s; }
+    .hero h1    { animation-delay: 0.12s; }
+    .tagline    { animation-delay: 0.20s; }
+    .cta        { animation-delay: 0.28s; }
+
+    @keyframes revealIn {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    .reveal.in {
+      animation: revealIn 0.6s ease forwards;
+    }
+    .reveal.stagger-1.in { animation-delay: 0.05s; }
+    .reveal.stagger-2.in { animation-delay: 0.10s; }
+    .reveal.stagger-3.in { animation-delay: 0.15s; }
 
     .context-section { margin: 34px 0 70px; }
 
@@ -512,7 +591,6 @@
     }
 
     .steps-section { margin: 0 0 70px; }
-
     .steps-header { text-align: center; margin-bottom: 26px; }
 
     .steps-title {
@@ -830,7 +908,6 @@
     footer a { color: var(--text-main); text-decoration: none; font-weight: 900; }
     footer a:hover { color: var(--accent-primary); }
 
-    /* --- Inline form alert (error) --- */
     .form-alert {
       margin-top: 12px;
       padding: 12px 14px;
@@ -856,7 +933,6 @@
       background: rgba(239, 68, 68, 0.06);
     }
 
-    /* --- Modals --- */
     .modal {
       position: fixed;
       inset: 0;
@@ -1055,10 +1131,15 @@
       .hero-logo { width: 100%; max-width: 400px; }
       .popup-foot { justify-content: center; }
       .popup-btn { width: 100%; }
+      .acquisition-badge { padding: 0; width: 40px; justify-content: center; border-radius: 50%; }
+      .acquisition-badge .acq-text { display: none; }
+      .acq-dot { width: 8px; height: 8px; }
     }
+
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       * { transition: none !important; animation: none !important; }
+      .reveal { opacity: 1 !important; transform: none !important; }
     }
   </style>
 </head>
@@ -1070,7 +1151,7 @@
   <div class="container">
     <header id="mainHeader">
       <a class="brand" href="#" id="scrollTop" aria-label="tafkir.ai">
-        <img src="logo.png" alt="tafkir.ai logo" />
+        <img src="logo.png" alt="tafkir.ai logo" width="180" height="38" loading="eager" fetchpriority="high" />
       </a>
 
       <div class="header-right">
@@ -1078,9 +1159,10 @@
           <i class="fa-solid fa-moon" aria-hidden="true"></i>
         </button>
 
-        <div class="status-pill" aria-label="Acquisition status">
-          <span class="status-dot" aria-hidden="true"></span> Acquisition Open
-        </div>
+        <a class="acquisition-badge" href="#inquiry" aria-label="Acquisition Open">
+          <span class="acq-dot" aria-hidden="true"></span>
+          <span class="acq-text">Acquisition Open</span>
+        </a>
       </div>
     </header>
 
@@ -1088,12 +1170,13 @@
       <div class="hero-label">Premium AI Domain Asset</div>
 
       <h1>
-        <img class="hero-logo" src="logo.png" alt="tafkir.ai" width="560" height="160" loading="eager" />
+        <span class="sr-only">tafkir.ai — The Reasoning Layer of Arabic AI | Strategic Acquisition</span>
+        <img class="hero-logo" src="logo.png" alt="tafkir.ai" width="560" height="160" loading="eager" fetchpriority="high" />
       </h1>
 
       <p class="tagline">
         The Reasoning Layer of Artificial Intelligence.<br />
-        <span class="word-arabic" lang="ar" dir="rtl">تفكير</span>
+        <span class="ar-inline" lang="ar" dir="rtl">تفكير</span>
         means <span class="word-pill">Thinking</span>.<br />
         A definitive identity for <strong>Reasoning</strong>, <strong>Agents</strong>, and <strong>Decision Intelligence</strong>.
       </p>
@@ -1113,7 +1196,7 @@
       </div>
     </section>
 
-    <section class="context-section" id="context">
+    <section class="context-section reveal" id="context">
       <div class="context-rail">
         <div class="context-inner">
           <div class="context-icons" aria-hidden="true">
@@ -1142,7 +1225,7 @@
       </div>
     </section>
 
-    <section class="steps-section" id="process">
+    <section class="steps-section reveal" id="process">
       <div class="steps-header">
         <h2 class="steps-title">Secure Acquisition</h2>
         <p class="steps-subtitle">
@@ -1153,28 +1236,28 @@
       <div class="steps-rail">
         <div class="steps-inner">
           <div class="steps-grid">
-            <div class="step-card">
+            <div class="step-card reveal stagger-1">
               <div class="step-icon"><i class="fa-solid fa-file-lines" aria-hidden="true"></i></div>
               <div class="step-title">Submit Inquiry</div>
               <p class="step-desc">Express interest in tafkir.ai via the private form.</p>
               <div class="step-mini"><i class="fa-solid fa-lock" aria-hidden="true"></i> Confidential intake</div>
             </div>
 
-            <div class="step-card">
+            <div class="step-card reveal stagger-2">
               <div class="step-icon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></div>
               <div class="step-title">Negotiation</div>
               <p class="step-desc">Direct communication to align on valuation, timeline, and terms.</p>
               <div class="step-mini"><i class="fa-solid fa-comments" aria-hidden="true"></i> Direct channel</div>
             </div>
 
-            <div class="step-card">
+            <div class="step-card reveal stagger-3">
               <div class="step-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
               <div class="step-title">Safeguards</div>
               <p class="step-desc">Execute via escrow or registrar supported transfer steps, based on preference.</p>
               <div class="step-mini"><i class="fa-solid fa-check" aria-hidden="true"></i> Escrow supported</div>
             </div>
 
-            <div class="step-card">
+            <div class="step-card reveal">
               <div class="step-icon"><i class="fa-solid fa-right-left" aria-hidden="true"></i></div>
               <div class="step-title">Asset Transfer</div>
               <p class="step-desc">Domain is transferred to your registrar account as agreed, then settled.</p>
@@ -1185,7 +1268,7 @@
       </div>
     </section>
 
-    <section class="bundle" id="bundle">
+    <section class="bundle reveal" id="bundle">
       <div class="bundle-inner">
         <div class="bundle-badge">Bundle Opportunity</div>
         <h2>Complete the Arabic AI Stack</h2>
@@ -1203,10 +1286,7 @@
       </div>
     </section>
 
-    <!-- ==========================
-         WEB3FORMS INQUIRY FORM
-         ========================== -->
-    <section class="inquiry" id="inquiry">
+    <section class="inquiry reveal" id="inquiry">
       <div class="form-card">
         <h2 class="form-title">Acquire This Asset</h2>
         <p class="form-sub">Direct negotiation with strict confidentiality.</p>
@@ -1278,10 +1358,10 @@
       </div>
     </section>
 
-    <footer>
+    <footer class="reveal">
       &copy; <span id="year"></span> tafkir.ai<br />
       <span style="opacity:0.8; font-size:0.88em; display:inline-block; margin-top:8px;">
-        Brokers & M&A Inquiries: <a href="mailto:invest@tafkir.ai">invest@tafkir.ai</a>
+        Brokers & M&amp;A Inquiries: <a href="mailto:invest@tafkir.ai">invest@tafkir.ai</a>
       </span>
       <div style="margin-top:10px; opacity:0.9;">
         <span id="privacyFooterTrigger" class="legal-link">Privacy Policy</span>
@@ -1475,11 +1555,9 @@
             if (d2 < maxDist2) {
               const alpha = 1 - d2 / maxDist2;
 
-              if (isDark) {
-                ctx.strokeStyle = `rgba(167, 139, 250, ${alpha * 0.2})`;
-              } else {
-                ctx.strokeStyle = `rgba(0, 0, 0, ${alpha * 0.15})`;
-              }
+              ctx.strokeStyle = isDark
+                ? `rgba(167, 139, 250, ${alpha * 0.2})`
+                : `rgba(0, 0, 0, ${alpha * 0.15})`;
 
               ctx.lineWidth = 0.6;
               ctx.beginPath();
@@ -1521,160 +1599,188 @@
     })();
   </script>
 
-  <!-- UI + Web3Forms submit -->
+  <!-- UI + Theme + Reveal + Modals + Web3Forms -->
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    document.getElementById("scrollTop").addEventListener("click", function (e) {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
     (function () {
-      const header = document.getElementById("mainHeader");
-      const sync = () => header.classList.toggle("scrolled", window.scrollY > 20);
-      window.addEventListener("scroll", sync, { passive: true });
-      sync();
-    })();
+      const $ = (sel, root = document) => root.querySelector(sel);
+      const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
-    (function () {
       const html = document.documentElement;
-      const btn = document.getElementById("themeToggle");
-      const icon = btn.querySelector("i");
+      const body = document.body;
 
-      function setMetaThemeColor(theme) {
-        const meta = document.querySelector('meta[name="theme-color"]');
-        if (!meta) return;
-        meta.setAttribute("content", theme === "dark" ? "#07001A" : "#ffffff");
-      }
+      $("#year").textContent = new Date().getFullYear();
 
-      function setIcon(theme) {
-        icon.classList.remove("fa-moon", "fa-sun");
-        icon.classList.add(theme === "dark" ? "fa-sun" : "fa-moon");
-      }
-
-      function getTheme() {
-        const t = html.getAttribute("data-theme");
-        if (t === "dark" || t === "light") return t;
-        try {
-          const saved = localStorage.getItem("theme");
-          if (saved === "dark" || saved === "light") return saved;
-        } catch (e) {}
-        return "dark";
-      }
-
-      function setTheme(theme) {
-        html.setAttribute("data-theme", theme);
-        try { localStorage.setItem("theme", theme); } catch (e) {}
-        setIcon(theme);
-        setMetaThemeColor(theme);
-      }
-
-      setTheme(getTheme());
-
-      btn.addEventListener("click", () => {
-        const next = getTheme() === "dark" ? "light" : "dark";
-        setTheme(next);
+      // Scroll to top
+      $("#scrollTop").addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
       });
-    })();
 
-    (function () {
-      const confirmModal = document.getElementById("confirmModal");
-      const privacyModal = document.getElementById("privacyModal");
+      // Sticky header state
+      (function () {
+        const header = $("#mainHeader");
+        const sync = () => header.classList.toggle("scrolled", window.scrollY > 20);
+        window.addEventListener("scroll", sync, { passive: true });
+        sync();
+      })();
 
-      const open = (m) => {
-        m.classList.add("show");
-        m.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-      };
+      // Theme toggle
+      (function () {
+        const btn = $("#themeToggle");
+        const icon = btn.querySelector("i");
 
-      const close = (m) => {
-        m.classList.remove("show");
-        m.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "";
-      };
+        const setMetaThemeColor = (theme) => {
+          const meta = $('meta[name="theme-color"]');
+          if (!meta) return;
+          meta.setAttribute("content", theme === "dark" ? "#07001A" : "#ffffff");
+        };
 
-      function wireModal(modal) {
-        modal.querySelectorAll("[data-close-btn]").forEach(btn =>
-          btn.addEventListener("click", () => close(modal))
-        );
-        modal.querySelectorAll(".modal-bg").forEach(bg =>
-          bg.addEventListener("click", () => close(modal))
-        );
+        const setIcon = (theme) => {
+          icon.classList.remove("fa-moon", "fa-sun");
+          icon.classList.add(theme === "dark" ? "fa-sun" : "fa-moon");
+        };
+
+        const getTheme = () => {
+          const t = html.getAttribute("data-theme");
+          if (t === "dark" || t === "light") return t;
+          try {
+            const saved = localStorage.getItem("theme");
+            if (saved === "dark" || saved === "light") return saved;
+          } catch (e) {}
+          return "dark";
+        };
+
+        const setTheme = (theme) => {
+          html.setAttribute("data-theme", theme);
+          try { localStorage.setItem("theme", theme); } catch (e) {}
+          setIcon(theme);
+          setMetaThemeColor(theme);
+        };
+
+        setTheme(getTheme());
+        btn.addEventListener("click", () => setTheme(getTheme() === "dark" ? "light" : "dark"));
+      })();
+
+      // Reveal on scroll
+      (function () {
+        const prefersReduced = window.matchMedia && window.matchMedia("prefers-reduced-motion: reduce").matches;
+        const els = $$(".reveal");
+
+        if (prefersReduced || !("IntersectionObserver" in window)) {
+          els.forEach(el => el.classList.add("in"));
+          return;
+        }
+
+        const obs = new IntersectionObserver((entries) => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            entry.target.classList.add("in");
+            obs.unobserve(entry.target);
+          }
+        }, { root: null, rootMargin: "0px 0px -10% 0px", threshold: 0.12 });
+
+        els.forEach(el => obs.observe(el));
+      })();
+
+      // Modals
+      (function () {
+        const confirmModal = $("#confirmModal");
+        const privacyModal = $("#privacyModal");
+
+        const isOpen = (m) => m.classList.contains("show");
+
+        const openModal = (m) => {
+          m.classList.add("show");
+          m.setAttribute("aria-hidden", "false");
+          body.style.overflow = "hidden";
+        };
+
+        const closeModal = (m) => {
+          m.classList.remove("show");
+          m.setAttribute("aria-hidden", "true");
+          body.style.overflow = "";
+        };
+
+        const wireModal = (m) => {
+          if (!m) return;
+          $$("[data-close-btn]", m).forEach(btn => btn.addEventListener("click", () => closeModal(m)));
+          $$(".modal-bg", m).forEach(bg => bg.addEventListener("click", () => closeModal(m)));
+        };
+
+        wireModal(confirmModal);
+        wireModal(privacyModal);
+
+        const privacyTrigger = $("#privacyTrigger");
+        const privacyFooterTrigger = $("#privacyFooterTrigger");
+
+        if (privacyTrigger) privacyTrigger.addEventListener("click", () => openModal(privacyModal));
+        if (privacyFooterTrigger) privacyFooterTrigger.addEventListener("click", () => openModal(privacyModal));
 
         document.addEventListener("keydown", (e) => {
           if (e.key !== "Escape") return;
-          if (modal.classList.contains("show")) close(modal);
+          if (isOpen(confirmModal)) closeModal(confirmModal);
+          if (isOpen(privacyModal)) closeModal(privacyModal);
         });
-      }
 
-      wireModal(confirmModal);
-      wireModal(privacyModal);
+        // Web3Forms submit
+        const form = $("#inquiryForm");
+        const submitBtn = $("#submitBtn");
+        const alertBox = $("#formAlert");
 
-      document.getElementById("privacyTrigger").addEventListener("click", () => open(privacyModal));
-      document.getElementById("privacyFooterTrigger").addEventListener("click", () => open(privacyModal));
+        const emailInput = $("#email");
+        const replytoField = $("#replytoField");
+        const ndaFirst = $("#ndaFirst");
+        const ndaNote = $("#ndaNote");
 
-      const form = document.getElementById("inquiryForm");
-      const submitBtn = document.getElementById("submitBtn");
-      const alertBox = document.getElementById("formAlert");
+        const showError = (msg) => {
+          alertBox.textContent = msg;
+          alertBox.classList.add("show", "error");
+        };
 
-      const emailInput = document.getElementById("email");
-      const replytoField = document.getElementById("replytoField");
-      const ndaFirst = document.getElementById("ndaFirst");
-      const ndaNote = document.getElementById("ndaNote");
+        const clearAlert = () => {
+          alertBox.textContent = "";
+          alertBox.classList.remove("show", "error");
+        };
 
-      function showError(msg) {
-        alertBox.textContent = msg;
-        alertBox.classList.add("show", "error");
-      }
-      function clearAlert() {
-        alertBox.textContent = "";
-        alertBox.classList.remove("show", "error");
-      }
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          clearAlert();
 
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        clearAlert();
+          const original = submitBtn.innerHTML;
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i> Sending...';
 
-        const original = submitBtn.innerHTML;
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i> Sending...';
+          try {
+            replytoField.value = (emailInput.value || "").trim();
 
-        try {
-          replytoField.value = (emailInput.value || "").trim();
+            const formData = new FormData(form);
+            const payload = {};
+            formData.forEach((value, key) => { payload[key] = value; });
 
-          const formData = new FormData(form);
-          const payload = {};
-          formData.forEach((value, key) => {
-            payload[key] = value;
-          });
+            const res = await fetch("https://api.web3forms.com/submit", {
+              method: "POST",
+              headers: { "Content-Type": "application/json", "Accept": "application/json" },
+              body: JSON.stringify(payload)
+            });
 
-          const res = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            headers: { "Content-Type": "application/json", "Accept": "application/json" },
-            body: JSON.stringify(payload)
-          });
+            const data = await res.json().catch(() => ({}));
+            if (!res.ok || !data || data.success !== true) {
+              throw new Error(data && data.message ? data.message : "Submission failed");
+            }
 
-          const data = await res.json().catch(() => ({}));
+            ndaNote.style.display = (ndaFirst && ndaFirst.checked) ? "inline-flex" : "none";
 
-          if (!res.ok || !data || data.success !== true) {
-            throw new Error(data && data.message ? data.message : "Submission failed");
+            form.reset();
+            replytoField.value = "";
+            openModal(confirmModal);
+          } catch (err) {
+            showError("We couldn’t send your inquiry right now. Please try again in a moment, or email us at invest@tafkir.ai.");
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = original;
           }
-
-          const ndaChecked = ndaFirst && ndaFirst.checked;
-          ndaNote.style.display = ndaChecked ? "inline-flex" : "none";
-
-          form.reset();
-          replytoField.value = "";
-
-          open(confirmModal);
-        } catch (err) {
-          showError("We couldn’t send your inquiry right now. Please try again in a moment, or email us at invest@tafkir.ai.");
-        } finally {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = original;
-        }
-      });
+        });
+      })();
     })();
   </script>
 </body>
