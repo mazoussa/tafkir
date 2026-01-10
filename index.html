@@ -39,7 +39,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <link rel="preload" as="image" href="logo.png" fetchpriority="high" />
@@ -299,10 +299,10 @@
     top .25s ease;
 }
 
-}
 
 /* النص */
 .brand-wordmark{
+  font-family: "Outfit", system-ui, sans-serif; /* ← هذا هو المهم */
   font-weight:800;
   font-size:22px;
   letter-spacing:0.2px;
@@ -310,6 +310,7 @@
   color:var(--text-main);
   transition: font-size .25s ease, transform .25s ease;
 }
+
 
 /* عند السكرول: صغّر كل واحد لوحده مثل اللي بالصورة */
 header.scrolled .brand-icon{
@@ -387,22 +388,44 @@ header.scrolled .brand-wordmark{
 
 .hero-title{
   display:flex;
+  flex-direction:column;
   align-items:center;
   justify-content:center;
+  gap:14px;
 }
 
 .hero-wordmark{
+  font-family: "Outfit", system-ui, sans-serif;
   font-weight:800;
   font-size:clamp(3.2rem, 7vw, 6.2rem);
-  letter-spacing:0.5px;
+  letter-spacing:0.6px;
   line-height:1;
-  color:var(--text-main);
   display:inline-block;
+
+  opacity:0;
+  transform: translateY(12px);
+  animation: heroTextIn .6s ease forwards;
 }
 
-[data-theme="dark"] .hero-wordmark{
+.hero-ar{
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight:800;
+  font-size:clamp(2.2rem, 5vw, 3.6rem);
+  line-height:1;
+  display:inline-block;
+  color: var(--text-main);
+
+  opacity:0;
+  transform: translateY(12px);
+  animation: heroTextIn .55s ease forwards;
+  animation-delay: 2s; /* يظهر بعد ثانيتين */
+}
+
+[data-theme="dark"] .hero-wordmark,
+[data-theme="dark"] .hero-ar{
   color:#fff;
 }
+
 
     .acq-dot {
       width: 7px;
@@ -1041,6 +1064,10 @@ header.scrolled .brand-wordmark{
       from { transform: translateY(10px) scale(0.99); opacity: 0; }
       to { transform: translateY(0) scale(1); opacity: 1; }
     }
+@keyframes heroTextIn{
+  from{ opacity:0; transform: translateY(14px); }
+  to  { opacity:1; transform: translateY(0); }
+}
 
     .popup-head {
       display: flex;
@@ -1188,46 +1215,42 @@ header.scrolled .brand-wordmark{
     }
     .confirm-flag i { color: var(--accent-primary); }
 
-    @media (max-width: 980px) {
-      .steps-grid { grid-template-columns: repeat(2, 1fr); }
-    }
     @media (max-width: 768px){
-
-  /* امنع أي تمدد أفقي */
   .container{ padding-left: 16px; padding-right: 16px; }
 
-  /* بطاقة الهيرو: اجعلها بعرض الجهاز بدون min-width */
   .hero h1{
     width: 100%;
     max-width: 100%;
-    min-width: 0;          /* مهم جدًا: يلغي 820px */
+    min-width: 0;
     min-height: 0;
-
-    padding: 46px 18px;    /* قلّلها للموبايل */
+    padding: 46px 18px;
     border-radius: 26px;
     margin-bottom: 22px;
   }
 
-  /* ترتيب نص الهيرو داخل البطاقة */
-  .hero-title{
-    gap: 10px;
-  }
+  .hero-title{ gap: 10px; }
 
   .hero-wordmark{
-    font-size: clamp(2.2rem, 11vw, 3.1rem); /* حجم مناسب للموبايل */
+    font-size: clamp(2.2rem, 11vw, 3.1rem);
   }
 
   .hero-ar{
-    font-size: clamp(1.4rem, 7vw, 2.0rem);  /* العربي أصغر */
+    font-size: clamp(1.4rem, 7vw, 2.0rem);
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
 
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      * { transition: none !important; animation: none !important; }
-      .reveal { opacity: 1 !important; transform: none !important; }
-    }
+  /* حتى لو الأنيميشن توقف، الهيرو يظهر */
+  .hero-wordmark, .hero-ar{
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
   </style>
 </head>
 
@@ -1267,11 +1290,12 @@ header.scrolled .brand-wordmark{
       <div class="hero-label">Premium AI Domain Asset</div>
 
       <h1 class="hero-title">
-  <span class="sr-only">
-    tafkir.ai — The Reasoning Layer of Arabic AI | Strategic Acquisition
-  </span>
-  <span class="hero-wordmark">tafkir.ai</span>
+  <span class="sr-only">tafkir.ai — The Reasoning Layer of Arabic AI | Strategic Acquisition</span>
+
+  <span class="hero-wordmark" aria-hidden="true">tafkir.ai</span>
+  <span class="hero-ar" lang="ar" dir="rtl" aria-hidden="true">تفكير</span>
 </h1>
+
 
 
       <p class="tagline">
