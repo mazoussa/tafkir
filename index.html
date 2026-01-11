@@ -10,7 +10,6 @@
   <meta name="apple-mobile-web-app-title" content="tafkir.ai" />
   <link rel="manifest" href="/site.webmanifest" />
 
-
   <title>tafkir.ai — The Reasoning Layer of Arabic AI | Strategic Acquisition</title>
   <meta name="description" content="Premium dictionary-grade .ai domain. Tafkir is a category-defining identity for reasoning engines, decision intelligence, and agentic systems in MENA. Acquisition open. NDA and escrow supported." />
   <meta name="keywords" content="AI domain for sale, dictionary domain, Arabic AI, tafkir, reasoning AI, decision intelligence, MENA tech, agents, deep tech" />
@@ -36,16 +35,14 @@
   <meta name="twitter:image" content="https://tafkir.ai/og.jpg" />
   <meta name="twitter:url" content="https://tafkir.ai/" />
 
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <link rel="preload" as="image" href="logo.png" fetchpriority="high" />
-<link rel="preload" as="image" href="logo-icon.png" fetchpriority="high" />
-<link rel="preload" as="image" href="og.jpg" />
-
+  <link rel="preload" as="image" href="logo-icon.png" fetchpriority="high" />
+  <link rel="preload" as="image" href="og.jpg" />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -105,9 +102,9 @@
             ? "dark"
             : "light";
         document.documentElement.setAttribute(
-          "data-theme",
-          saved === "dark" || saved === "light" ? saved : preferred
-        );
+  "data-theme",
+  (saved === "dark" || saved === "light") ? saved : "dark"
+);
       } catch (e) {
         document.documentElement.setAttribute("data-theme", "dark");
       }
@@ -275,37 +272,33 @@
       cursor: pointer;
     }
 
-    .brand { display:flex; align-items:center; gap:12px; }
+    .brand-icon{
+      height: 34px;
+      width: 34px;
+      display: block;
+      transition: all 0.25s ease;
+      flex: 0 0 auto;
+    }
 
-.brand-icon{
-  height: 34px;
-  width: 34px;
-  display: block;
-  transition: all 0.25s ease;
-  flex: 0 0 auto;
-}
+    .brand-text{
+      height: 55px;
+      width: auto;
+      display: block;
+      transition: all 0.25s ease;
+    }
+    header.scrolled .brand-icon{
+      height: 30px;
+      width: 30px;
+    }
 
-.brand-text{
-  height: 55px; /* 34 × φ */
-  width: auto;
-  display: block;
-  transition: all 0.25s ease;
-}
-header.scrolled .brand-icon{
-  height: 30px;
-  width: 30px;
-}
+    header.scrolled .brand-text{
+      height: 48px;
+    }
 
-header.scrolled .brand-text{
-  height: 48px;
-}
-
-
-[data-theme="dark"] .brand-icon,
-[data-theme="dark"] .brand-text{
-  filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(167, 139, 250, 0.35));
-}
-
+    [data-theme="dark"] .brand-icon,
+    [data-theme="dark"] .brand-text{
+      filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(167, 139, 250, 0.35));
+    }
 
     .header-right {
       display: flex;
@@ -518,20 +511,8 @@ header.scrolled .brand-text{
     .tagline    { animation-delay: 0.20s; }
     .cta        { animation-delay: 0.28s; }
 
-    @keyframes revealIn {
-      from { opacity: 0; transform: translateY(14px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .reveal {
-      opacity: 0;
-      transform: translateY(14px);
-    }
-    .reveal.in {
-      animation: revealIn 0.6s ease forwards;
-    }
-    .reveal.stagger-1.in { animation-delay: 0.05s; }
-    .reveal.stagger-2.in { animation-delay: 0.10s; }
-    .reveal.stagger-3.in { animation-delay: 0.15s; }
+    /* عناصر ScrollReveal */
+    .reveal { will-change: transform, opacity; }
 
     .context-section { margin: 34px 0 70px; }
 
@@ -1160,7 +1141,153 @@ header.scrolled .brand-text{
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       * { transition: none !important; animation: none !important; }
-      .reveal { opacity: 1 !important; transform: none !important; }
+    }
+
+   /* Transfer Assurance - Ultra Modern Design */
+/* Transfer Assurance - المظهر الجديد المستوحى من تفكير */
+.assurance-section {
+    margin: 60px 0 80px;
+}
+
+/* الإطار الخارجي (السكّة) مع تدرج لوني خفيف */
+.assurance-rail {
+    border-radius: 26px; /* --radius-lg */
+    padding: 2px;
+    background: linear-gradient(135deg, rgba(167, 139, 250, 0.2), rgba(34, 197, 94, 0.15));
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 18px 60px -22px rgba(0, 0, 0, 0.80);
+}
+
+.assurance-rail:hover {
+    transform: translateY(-8px);
+    background: linear-gradient(135deg, #a78bfa, #22c55e);
+    box-shadow: 0 40px 80px -20px rgba(124, 58, 237, 0.3);
+}
+
+.assurance-inner {
+    background: rgba(10, 6, 24, 0.92); /* لون خلفية غامق واحترافي */
+    border-radius: 24px;
+    padding: 35px 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* صندوق الأيقونة مع التوهج (Glow) الذي أعجبك */
+.assurance-icon-box {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(167, 139, 250, 0.1);
+    border: 1px solid rgba(167, 139, 250, 0.3);
+    color: #a78bfa; /* اللون البنفسجي الفاتح */
+    font-size: 26px;
+    position: relative;
+    /* التوهج الأرجواني المميز */
+    box-shadow: 0 0 20px rgba(167, 139, 250, 0.2);
+    animation: shieldPulse 2.5s infinite ease-in-out;
+}
+
+@keyframes shieldPulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 15px rgba(167, 139, 250, 0.2); }
+    50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(167, 139, 250, 0.4); }
+}
+
+.assurance-text h4 {
+    font-size: 1.6rem;
+    font-weight: 800; /* خط Outfit العريض */
+    margin-bottom: 8px;
+    color: #f1f5f9;
+    letter-spacing: -0.02em;
+    font-family: 'Outfit', sans-serif; /* التأكد من استخدام نفس الخط */
+}
+
+.assurance-text p {
+    color: #a6b0c3;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* زر Escrow الأخضر النيوني المطور */
+.btn-escrow-premium {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: #fff !important;
+    padding: 16px 35px;
+    border-radius: 16px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px -5px rgba(34, 197, 94, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: 'Outfit', sans-serif;
+}
+
+.btn-escrow-premium:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px -10px rgba(34, 197, 94, 0.6);
+}
+
+/* استجابة الموبايل */
+@media (max-width: 768px) {
+    .assurance-inner {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    .btn-escrow-premium {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .assurance-inner {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    .assurance-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .assurance-text p {
+        max-width: 100%;
+    }
+    .btn-escrow-premium {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+    @media (max-width: 768px) {
+      .transfer-assurance-bar {
+        flex-direction: column;
+        text-align: center;
+        padding: 26px 20px;
+      }
+      .assurance-content{
+        flex-direction: column;
+        text-align: center;
+      }
+      .btn-escrow-green{
+        width: 100%;
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -1172,10 +1299,9 @@ header.scrolled .brand-text{
   <div class="container">
     <header id="mainHeader">
       <a class="brand" href="#" id="scrollTop" aria-label="tafkir.ai">
-  <img class="brand-icon" src="logo-icon.png" alt="" width="34" height="34" loading="eager" />
-  <img class="brand-text" src="logo.png" alt="tafkir.ai" width="180" height="38" loading="eager" fetchpriority="high" />
-</a>
-
+        <img class="brand-icon" src="logo-icon.png" alt="" width="34" height="34" loading="eager" />
+        <img class="brand-text" src="logo.png" alt="tafkir.ai" width="180" height="38" loading="eager" fetchpriority="high" />
+      </a>
 
       <div class="header-right">
         <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle theme">
@@ -1259,21 +1385,21 @@ header.scrolled .brand-text{
       <div class="steps-rail">
         <div class="steps-inner">
           <div class="steps-grid">
-            <div class="step-card reveal stagger-1">
+            <div class="step-card reveal">
               <div class="step-icon"><i class="fa-solid fa-file-lines" aria-hidden="true"></i></div>
               <div class="step-title">Submit Inquiry</div>
               <p class="step-desc">Express interest in tafkir.ai via the private form.</p>
               <div class="step-mini"><i class="fa-solid fa-lock" aria-hidden="true"></i> Confidential intake</div>
             </div>
 
-            <div class="step-card reveal stagger-2">
+            <div class="step-card reveal">
               <div class="step-icon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></div>
               <div class="step-title">Negotiation</div>
               <p class="step-desc">Direct communication to align on valuation, timeline, and terms.</p>
               <div class="step-mini"><i class="fa-solid fa-comments" aria-hidden="true"></i> Direct channel</div>
             </div>
 
-            <div class="step-card reveal stagger-3">
+            <div class="step-card reveal">
               <div class="step-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
               <div class="step-title">Safeguards</div>
               <p class="step-desc">Execute via escrow or registrar supported transfer steps, based on preference.</p>
@@ -1308,6 +1434,26 @@ header.scrolled .brand-text{
         </p>
       </div>
     </section>
+
+    <section class="assurance-section reveal">
+  <div class="assurance-rail">
+    <div class="assurance-inner">
+      <div style="display: flex; align-items: center; gap: 25px;" class="mobile-stack">
+        <div class="assurance-icon-box">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <div class="assurance-text">
+          <h4>Secure Asset Transfer</h4>
+          <p>We utilize <strong>Escrow.com</strong> to guarantee a risk-free transaction. The funds are only released after the domain is safely in your control.</p>
+        </div>
+      </div>
+      <a href="https://www.escrow.com" target="_blank" rel="noopener" class="btn-escrow-premium">
+        <i class="fa-solid fa-lock"></i>
+        <span>Acquire via Escrow</span>
+      </a>
+    </div>
+  </div>
+</section>
 
     <section class="inquiry reveal" id="inquiry">
       <div class="form-card">
@@ -1384,7 +1530,7 @@ header.scrolled .brand-text{
     <footer class="reveal">
       &copy; <span id="year"></span> tafkir.ai<br />
       <span style="opacity:0.8; font-size:0.88em; display:inline-block; margin-top:8px;">
-        Brokers & M&amp;A Inquiries: <a href="mailto:invest@tafkir.ai">invest@tafkir.ai</a>
+        Brokers &amp; M&amp;A Inquiries: <a href="mailto:invest@tafkir.ai">invest@tafkir.ai</a>
       </span>
       <div style="margin-top:10px; opacity:0.9;">
         <span id="privacyFooterTrigger" class="legal-link">Privacy Policy</span>
@@ -1462,6 +1608,9 @@ header.scrolled .brand-text{
       </div>
     </div>
   </div>
+
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
 
   <!-- Background Canvas -->
   <script>
@@ -1622,7 +1771,7 @@ header.scrolled .brand-text{
     })();
   </script>
 
-  <!-- UI + Theme + Reveal + Modals + Web3Forms -->
+  <!-- UI + Theme + Modals + Web3Forms + ScrollReveal setup -->
   <script>
     (function () {
       const $ = (sel, root = document) => root.querySelector(sel);
@@ -1633,13 +1782,11 @@ header.scrolled .brand-text{
 
       $("#year").textContent = new Date().getFullYear();
 
-      // Scroll to top
       $("#scrollTop").addEventListener("click", (e) => {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
 
-      // Sticky header state
       (function () {
         const header = $("#mainHeader");
         const sync = () => header.classList.toggle("scrolled", window.scrollY > 20);
@@ -1647,13 +1794,12 @@ header.scrolled .brand-text{
         sync();
       })();
 
-      // Theme toggle
       (function () {
         const btn = $("#themeToggle");
         const icon = btn.querySelector("i");
 
         const setMetaThemeColor = (theme) => {
-          const meta = $('meta[name="theme-color"]');
+          const meta = document.querySelector('meta[name="theme-color"]');
           if (!meta) return;
           meta.setAttribute("content", theme === "dark" ? "#07001A" : "#ffffff");
         };
@@ -1664,14 +1810,14 @@ header.scrolled .brand-text{
         };
 
         const getTheme = () => {
-          const t = html.getAttribute("data-theme");
-          if (t === "dark" || t === "light") return t;
-          try {
-            const saved = localStorage.getItem("theme");
-            if (saved === "dark" || saved === "light") return saved;
-          } catch (e) {}
-          return "dark";
-        };
+  const t = html.getAttribute("data-theme");
+  if (t === "dark" || t === "light") return t;
+  try {
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark" || saved === "light") return saved;
+  } catch (e) {}
+  return "dark"; // هذا السطر في 1832 يضمن بقاءه مظلماً كخيار نهائي
+};
 
         const setTheme = (theme) => {
           html.setAttribute("data-theme", theme);
@@ -1684,28 +1830,6 @@ header.scrolled .brand-text{
         btn.addEventListener("click", () => setTheme(getTheme() === "dark" ? "light" : "dark"));
       })();
 
-      // Reveal on scroll
-      (function () {
-        const prefersReduced = window.matchMedia && window.matchMedia("prefers-reduced-motion: reduce").matches;
-        const els = $$(".reveal");
-
-        if (prefersReduced || !("IntersectionObserver" in window)) {
-          els.forEach(el => el.classList.add("in"));
-          return;
-        }
-
-        const obs = new IntersectionObserver((entries) => {
-          for (const entry of entries) {
-            if (!entry.isIntersecting) continue;
-            entry.target.classList.add("in");
-            obs.unobserve(entry.target);
-          }
-        }, { root: null, rootMargin: "0px 0px -10% 0px", threshold: 0.12 });
-
-        els.forEach(el => obs.observe(el));
-      })();
-
-      // Modals
       (function () {
         const confirmModal = $("#confirmModal");
         const privacyModal = $("#privacyModal");
@@ -1745,7 +1869,6 @@ header.scrolled .brand-text{
           if (isOpen(privacyModal)) closeModal(privacyModal);
         });
 
-        // Web3Forms submit
         const form = $("#inquiryForm");
         const submitBtn = $("#submitBtn");
         const alertBox = $("#formAlert");
@@ -1804,6 +1927,36 @@ header.scrolled .brand-text{
           }
         });
       })();
+
+      /* ScrollReveal: إعدادات عامة أبطأ وأنعم */
+      const prefersReduced = window.matchMedia && window.matchMedia("prefers-reduced-motion: reduce").matches;
+      if (!prefersReduced && window.ScrollReveal) {
+        const sr = ScrollReveal({
+          origin: "bottom",
+          distance: "20px",
+          duration: 1000,
+          delay: 200,
+          viewFactor: 0.2,
+          interval: 140,
+          reset: false
+        });
+
+        /* تفعيل الظهور لكل عناصر reveal */
+        sr.reveal(".reveal");
+
+        /* تفعيل مؤثر أقوى لقسم الضمان */
+        sr.reveal(".transfer-assurance-bar", {
+          origin: "bottom",
+          distance: "40px",
+          duration: 1800,
+          delay: 400,
+          viewFactor: 0.3
+        });
+
+        /* إذا عندك بطاقات مستقبلًا باسم id-card */
+        sr.reveal(".id-card", { interval: 200 });
+      }
+      
     })();
   </script>
 </body>
