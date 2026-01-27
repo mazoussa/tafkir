@@ -488,56 +488,174 @@ header.scrolled .brand-wordmark {
   font-size: 0.82rem;
 }
 
-/* ECOSYSTEM BUNDLE */
+/* =========================================================
+   ECOSYSTEM BUNDLE - TAFKIR EDITION
+   ========================================================= */
+.ecosystem-new {
+  position: relative;
+  max-width: 1100px;
+  margin: 100px auto;
+  padding: 80px 40px;
+  text-align: center;
+  background: #020204; /* خلفية داكنة جداً */
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 0 1px rgba(0,0,0,1), 0 20px 60px rgba(0,0,0,0.8);
+  overflow: hidden;
+}
 
-    .ecosystem-new {
-      position: relative; max-width: 1080px; margin: 100px auto; padding: 60px 30px; text-align: center;
-      background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
-      border-radius: 40px;
-    }
-    .eco-spotlight {
-      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-      width: 60%; height: 80%; background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
-      filter: blur(40px); pointer-events: none;
-    }
-    .eco-badge-glow {
-      display: inline-block; background: rgba(245, 158, 11, 0.1); color: #fbbf24;
-      border: 1px solid rgba(245, 158, 11, 0.4); padding: 6px 16px; border-radius: 50px;
-      font-size: 0.75rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px;
-    }
-    .eco-title { font-size: 2rem; font-weight: 900; margin-bottom: 10px; color: var(--text-main); }
-    .domain-fusion-container {
-      display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px; position: relative; z-index: 2;
-    }
-    .domain-glass-card {
-      display: flex; flex-direction: column; justify-content: center; align-items: center;
-      width: 240px; height: 120px; border-radius: 20px; text-decoration: none;
-      background: rgba(255,255,255,0.03); backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.08); transition: 0.4s;
-    }
-    .domain-glass-card:hover { transform: translateY(-8px); background: rgba(255,255,255,0.07); }
-    .d-name { font-family: "Manrope", sans-serif; font-size: 1.8rem; font-weight: 800; color: #fff; }
-    .fusion-connector {
-      width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
-      border-radius: 50%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
-      color: var(--text-muted);
-    }
-    .eco-footer-note {
-      font-size: 0.8rem; font-family: "Manrope", sans-serif; font-weight: 600;
-      color: var(--text-muted); margin-top: 30px; letter-spacing: 0.5px; opacity: 0.8;
-    }
-@media (max-width: 640px) {
+/* Aurora Effect */
+.eco-aurora {
+  position: absolute;
+  top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.15), transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.1), transparent 40%);
+  filter: blur(60px);
+  animation: auroraSpin 15s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes auroraSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.eco-content-wrapper { position: relative; z-index: 2; }
+
+/* Header */
+.eco-badge-glow {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(251, 191, 36, 0.08); color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  padding: 8px 18px; border-radius: 50px;
+  font-size: 0.75rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
+  margin-bottom: 25px; box-shadow: 0 0 20px rgba(251, 191, 36, 0.1);
+}
+
+.eco-title {
+  font-size: 3rem; font-weight: 900; margin-bottom: 18px; color: #ffffff; letter-spacing: -1px;
+}
+.gradient-text {
+  background: linear-gradient(135deg, #fff 30%, #38bdf8 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+.eco-subtitle {
+  font-size: 1.1rem; line-height: 1.7; color: #94a3b8;
+  max-width: 700px; margin: 0 auto 50px;
+}
+.eco-subtitle strong { color: #fff; font-weight: 700; }
+.eco-subtitle .highlight { color: #38bdf8; font-weight: 600; }
+
+/* Container */
+.domain-fusion-container {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0; margin-top: 20px; perspective: 1000px;
+}
+
+/* Cards */
+.domain-glass-card {
+  position: relative; display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  width: 280px; height: 160px; border-radius: 24px; text-decoration: none;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
+}
+.domain-glass-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Glow inside card */
+.card-glow {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.05), transparent 70%);
+  opacity: 0.5; transition: 0.4s;
+}
+.domain-glass-card:hover .card-glow { opacity: 0.8; }
+
+/* Specific Colors */
+/* Tafkir (Blue) */
+.card-tafkir { border-bottom: 2px solid rgba(56, 189, 248, 0.3); }
+.card-tafkir:hover { box-shadow: 0 10px 40px rgba(56, 189, 248, 0.15); }
+
+/* Mokh (Purple) */
+.card-mokh { border-bottom: 2px solid rgba(167, 139, 250, 0.3); }
+.card-mokh:hover { box-shadow: 0 10px 40px rgba(124, 58, 237, 0.15); }
+
+/* Card Text */
+.d-label {
+  font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px;
+  font-weight: 700; color: rgba(255,255,255,0.4); margin-bottom: 8px;
+}
+.d-name {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2rem; font-weight: 800; color: #fff; transition: 0.3s;
+}
+.d-micro-desc {
+  font-size: 0.8rem; color: rgba(255,255,255,0.5);
+  margin-top: 6px; font-weight: 500;
+}
+.external-icon {
+  position: absolute; top: 15px; right: 15px;
+  font-size: 0.8rem; color: rgba(255,255,255,0.3);
+}
+
+/* Connector */
+.fusion-connector-wrapper {
+  position: relative; display: flex; align-items: center; justify-content: center;
+  width: 80px; z-index: 10;
+}
+.fusion-line {
+  position: absolute; width: 100%; height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+}
+.fusion-node {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #020204; border: 1px solid rgba(255,255,255,0.15);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 1rem; position: relative;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+  animation: pulseNode 3s infinite;
+}
+@keyframes pulseNode {
+  0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(56, 189, 248, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
+}
+
+.eco-footer-note {
+  margin-top: 40px; font-size: 0.85rem; color: rgba(255,255,255,0.4);
+  font-family: "Manrope", sans-serif; letter-spacing: 0.5px;
+}
+
+/* =========================================================
+   MOBILE RESPONSIVENESS (VERTICAL STACK FIX)
+   ========================================================= */
+@media (max-width: 768px) {
+  .ecosystem-new { padding: 50px 20px !important; margin: 60px 15px !important; border-radius: 30px !important; }
+  .eco-title { font-size: 1.8rem !important; }
+  
   .domain-fusion-container {
-    display: grid !important;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center !important;
-    gap: 8px !important;
+    flex-direction: column !important; /* ترتيب عمودي */
+    gap: 0 !important; margin-top: 30px !important;
   }
-
-  .fusion-connector {
-    justify-self: center;
-    align-self: center;
-    margin: 0 !important;
+  
+  .domain-glass-card {
+    width: 100% !important; max-width: 320px !important;
+    height: 150px !important; margin: 0 auto !important;
+  }
+  
+  .fusion-connector-wrapper {
+    width: 100% !important; height: 70px !important;
+    flex-direction: column !important;
+  }
+  
+  .fusion-line {
+    width: 2px !important; height: 100% !important;
+    background: linear-gradient(180deg, transparent, rgba(255,255,255,0.3), transparent) !important;
   }
 }
 
@@ -1008,27 +1126,59 @@ header.scrolled .brand-wordmark {
     </section>
 
     <section class="ecosystem-new">
-      <div class="eco-spotlight"></div>
-      <div class="eco-content-wrapper">
-        <div class="eco-header">
-          <span class="eco-badge-glow">Strategic Bundle</span>
-          <h2 class="eco-title">The Neural Stack</h2>
-          <p class="eco-subtitle">Own the <strong>Process</strong> (TAFKIR) and the <strong>Brain</strong> (MOKH).</p>
+  <div class="eco-aurora"></div>
+  
+  <div class="eco-content-wrapper">
+    <div class="eco-header">
+      <span class="eco-badge-glow"><i class="fa-solid fa-layer-group"></i> Total Market Dominance</span>
+      
+      <h2 class="eco-title">
+        The Neural <span class="gradient-text">Sovereignty Stack</span>
+      </h2>
+      
+      <p class="eco-subtitle">
+        True AI leadership requires both hardware and software.<br>
+        <strong>TAFKIR</strong> is the active reasoning. <strong>MOKH</strong> is the biological core.<br>
+        Combined, they form an <span class="highlight">unassailable cognitive monopoly</span>.
+      </p>
+    </div>
+
+    <div class="domain-fusion-container">
+      
+      <a href="#" class="domain-glass-card card-tafkir">
+        <div class="card-glow"></div>
+        <div class="card-content">
+          <span class="d-label">The Software</span>
+          <span class="d-name">tafkir<span class="dot">.</span>ai</span>
+          <p class="d-micro-desc">The Kinetic Process of Thought</p>
         </div>
-        <div class="domain-fusion-container">
-          <a href="#" class="domain-glass-card">
-            <span class="d-name" style="color:#fff;">tafkir<span class="dot">.</span>ai</span>
-          </a>
-          <div class="fusion-connector">
-            <i class="fa-solid fa-plus"></i>
-          </div>
-          <a href="https://mokh.ai" target="_blank" class="domain-glass-card">
-            <span class="d-name" style="background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">mokh<span class="dot">.</span>ai</span>
-</a>
+      </a>
+
+      <div class="fusion-connector-wrapper">
+        <div class="fusion-line"></div>
+        <div class="fusion-node">
+          <i class="fa-solid fa-plus"></i>
         </div>
-        <p class="eco-footer-note">Combined valuation available upon NDA request.</p>
       </div>
-    </section>
+
+      <a href="https://mokh.ai" target="_blank" class="domain-glass-card card-mokh">
+        <div class="card-glow"></div>
+        <div class="card-content">
+          <span class="d-label">The Hardware</span>
+          <span class="d-name">mokh<span class="dot">.</span>ai</span>
+          <p class="d-micro-desc">The Static Core of Intelligence</p>
+          <i class="fa-solid fa-arrow-up-right-from-square external-icon"></i>
+        </div>
+      </a>
+
+    </div>
+
+    <p class="eco-footer-note">
+      <i class="fa-solid fa-triangle-exclamation"></i> 
+      Combined valuation offers take priority over individual bids.
+    </p>
+  </div>
+</section>
 
     <section class="assurance-section">
       <div class="assurance-rail">
