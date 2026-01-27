@@ -211,6 +211,8 @@
       letter-spacing: -0.05em; line-height: 1.05;
       margin: 0 auto 14px; color: var(--text-main);
       text-shadow: 0 0 30px rgba(0,0,0,.35);
+      margin-top: 20px !important;    /* إضافة مساحة فوق الشعار */
+      margin-bottom: 15px !important;
     }
     .hero-wordmark .dot { color: var(--accent-secondary); }
     
@@ -324,53 +326,66 @@
     .context-desc { margin-top: 14px; font-size: 1.1rem; color: var(--text-muted); max-width: 900px; margin-left: auto; margin-right: auto; }
     .context-icons { font-size: 1.2rem; color: var(--text-muted); opacity: 0.5; margin-bottom: 15px; display: flex; gap: 15px; justify-content: center; }
 
-    /* Steps Section */
+    /* 9. STEPS SECTION */
     .steps-section { margin-bottom: 80px; }
-    .steps-title { font-size: 2rem; font-weight: 900; text-align: center; margin-bottom: 10px; color: var(--text-main); }
+    .steps-title {
+      font-size: 2rem; font-weight: 900; text-align: center; margin-bottom: 10px;
+      color: var(--text-main); background: none; -webkit-text-fill-color: initial;
+    }
     .steps-subtitle { text-align: center; color: var(--text-muted); margin-bottom: 40px; }
-    
     .steps-rail {
       margin-top: 22px; border-radius: 30px; padding: 34px 22px;
-      background: rgba(10, 10, 14, 0.55); border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(10, 10, 14, 0.55); border: 1px solid rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-      box-shadow: 0 22px 70px rgba(0,0,0,0.42);
+      box-shadow: 0 22px 70px rgba(0, 0, 0, 0.42);
     }
+    .steps-inner {
+      background: transparent; border: none; padding: 0; border-radius: 0;
+      backdrop-filter: none; -webkit-backdrop-filter: none;
+      box-shadow: none; overflow: visible;
+    }
+    .steps-inner::before { display: none; }
     .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
     .step-card {
       padding: 22px 18px; text-align: center; min-height: 210px;
       display: flex; flex-direction: column; align-items: center;
-      border-radius: 22px; background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-      transition: 0.25s ease;
+      border-radius: 22px; background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
     }
-    .step-card:hover { transform: translateY(-6px); background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.14); }
-    
+    .step-card:hover {
+      transform: translateY(-6px);
+      background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.14);
+    }
     .step-icon {
       width: 62px; height: 62px; margin-bottom: 14px; border-radius: 18px;
-      display: grid; place-items: center; background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.10);
+      display: grid; place-items: center; background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.10);
     }
-    .step-icon i { font-size: 1.35rem; opacity: 0.95; }
+    .step-icon::before { display: none; }
+    .step-icon i {
+      font-size: 1.35rem; background: none; -webkit-background-clip: initial;
+      -webkit-text-fill-color: currentColor; filter: none; opacity: 0.95;
+    }
     .step-title { font-family: "Playfair Display", serif; font-size: 1.35rem; font-weight: 700; margin-bottom: 10px; }
     .step-desc { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; }
     .step-mini {
       margin-top: 14px; display: inline-flex; align-items: center; gap: 8px;
       padding: 8px 12px; border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.10); background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      background: rgba(255, 255, 255, 0.04);
       color: var(--text-muted); font-weight: 800; font-size: 0.82rem;
     }
-
-    /* Step Card Specifics */
-    .steps-grid .step-card:nth-child(1) .step-icon { background: rgba(239,68,68,0.10); border-color: rgba(239,68,68,0.25); box-shadow: 0 0 24px rgba(239,68,68,0.10); }
+    /* Steps accents */
+    .steps-grid .step-card:nth-child(1) .step-icon { background: rgba(239, 68, 68, 0.10); border-color: rgba(239, 68, 68, 0.25); box-shadow: 0 0 24px rgba(239, 68, 68, 0.10); }
     .steps-grid .step-card:nth-child(1) .step-icon i { color: #ef4444; }
-    .steps-grid .step-card:nth-child(2) .step-icon { background: rgba(168,85,247,0.10); border-color: rgba(168,85,247,0.25); box-shadow: 0 0 24px rgba(168,85,247,0.10); }
+    .steps-grid .step-card:nth-child(2) .step-icon { background: rgba(168, 85, 247, 0.10); border-color: rgba(168, 85, 247, 0.25); box-shadow: 0 0 24px rgba(168, 85, 247, 0.10); }
     .steps-grid .step-card:nth-child(2) .step-icon i { color: #a855f7; }
-    .steps-grid .step-card:nth-child(3) .step-icon { background: rgba(34,197,94,0.10); border-color: rgba(34,197,94,0.25); box-shadow: 0 0 24px rgba(34,197,94,0.10); }
+    .steps-grid .step-card:nth-child(3) .step-icon { background: rgba(34, 197, 94, 0.10); border-color: rgba(34, 197, 94, 0.25); box-shadow: 0 0 24px rgba(34, 197, 94, 0.10); }
     .steps-grid .step-card:nth-child(3) .step-icon i { color: #22c55e; }
-    .steps-grid .step-card:nth-child(4) .step-icon { background: rgba(34,211,238,0.10); border-color: rgba(34,211,238,0.25); box-shadow: 0 0 24px rgba(34,211,238,0.10); }
+    .steps-grid .step-card:nth-child(4) .step-icon { background: rgba(34, 211, 238, 0.10); border-color: rgba(34, 211, 238, 0.25); box-shadow: 0 0 24px rgba(34, 211, 238, 0.10); }
     .steps-grid .step-card:nth-child(4) .step-icon i { color: #22d3ee; }
-
     /* -----------------------------------------------------------
        7. ECOSYSTEM BUNDLE
     ----------------------------------------------------------- */
